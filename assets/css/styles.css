@@ -1,0 +1,215 @@
+/*Global style start*/
+
+/* @font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Regular.ttf") format("opentype");
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #6e5af0;
+    --main-font: "Poppins";
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font), Tahoma, sans-serif;
+    background-color: #fff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input {
+    transition: .3s;
+}
+
+input:focus {
+    outline: 1px solid var(--main-color);
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+/*Global style end*/
+
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.intro-section {
+    background-color: var(--main-color);
+    background-image: url('../imgs/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    position: relative;
+    border: 1px solid #bbb2f9;
+    color: #fff;
+    background-color: #bbb2f980;
+    padding: 20px;
+    border-radius: 50px;
+    min-height: 450px;
+    min-width: 350px;
+}
+
+.card h2 {
+    width: 185px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card-bg {
+    width: 650px;
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+}
+
+.card-icon {
+    width: 70px;
+    position: absolute;
+    bottom: 20%;
+    left: -30px;
+}
+
+.form-section, .intro-section {
+    height: 100%;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.form-section {
+    text-align: center;
+}
+
+.form-section h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-section p {
+    color: #525252;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.group-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.group-input input {
+    width: 100%;
+    padding: 15px 40px;
+    border: none;
+    background-color: #f3f1ff;
+    border-radius: 10px;
+}
+
+.group-input input::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+.group-input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.send-btn {
+    padding: 15px 30px;
+    border: none;
+    background: linear-gradient(99.78deg, #9181F4 -5.85%, #5038ED 109.55%);
+    box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.16);
+    border-radius: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.send-btn:hover {
+    opacity: .7;
+}
+
+.form-section .other-way-parse {
+    margin: 30px 0;
+}
+
+.form-section form, .btn-group {
+    width: 80%;
+}
+
+.btn-group .login-by-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    border: 1px solid #bbb2f963;
+    background-color: #fff;
+}
+
+.btn-group .login-by-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.login-by-btn .btn-icon {
+    margin: 0 10px;
+}
+
+@media (max-width:768px) {
+    .intro-section {
+        display: none;
+    }
+
+    .form-section form, .btn-group, .form-section {
+        width: 100%;
+    }
+}
